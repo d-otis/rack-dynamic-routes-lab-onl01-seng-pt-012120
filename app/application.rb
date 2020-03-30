@@ -1,6 +1,6 @@
 class Application
 
-  @@items = [1,2,3]
+  @@items = []
 
   def call(env)
     resp = Rack::Response.new
@@ -9,7 +9,7 @@ class Application
 
     if req.path.match(/items/)
       item = req.path.split("/items/").last
-      resp.write "#{item}"
+      if @@items.include?(item)
     else
       resp.write "Route not found"
       resp.status = 404
