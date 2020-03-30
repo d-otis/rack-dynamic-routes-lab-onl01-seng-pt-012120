@@ -8,6 +8,7 @@ class Application
     if req.path.match(/items/)
       resp.write "Item page!"
     end
+    resp.finish
   end
 
 end
