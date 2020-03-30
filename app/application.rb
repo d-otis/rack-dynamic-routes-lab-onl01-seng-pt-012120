@@ -11,6 +11,7 @@ class Application
       resp.write "Item page!\n"
       resp.write @@items
       item = req.path.split("/items").last
+      resp.write "#{item}"
     else
       resp.write "Route not found"
       resp.status = 404
