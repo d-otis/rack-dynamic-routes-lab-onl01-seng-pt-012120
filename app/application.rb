@@ -8,8 +8,6 @@ class Application
 
 
     if req.path.match(/items/)
-      resp.write "Item page!\n"
-      resp.write @@items
       item = req.path.split("/items").last
       resp.write "#{item}"
     else
