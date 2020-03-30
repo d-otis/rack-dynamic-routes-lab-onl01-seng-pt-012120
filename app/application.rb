@@ -1,6 +1,6 @@
 class Application
 
-  @@items = []
+  @@items = [1,2,3]
 
   def call(env)
     resp = Rack::Response.new
@@ -9,6 +9,7 @@ class Application
 
     if req.path.match(/items/)
       resp.write "Item page!"
+      resp.write @@items
     else
       resp.write "Route not found"
       resp.status = 404
