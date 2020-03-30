@@ -11,7 +11,7 @@ class Application
       item = req.path.split("/items/").last
       if @@items.include?(item)
         resp.write "#{item[0]} : $#{item[1]}"
-        resp
+        resp.write "#{item}"
       end
     else
       resp.write "Route not found"
