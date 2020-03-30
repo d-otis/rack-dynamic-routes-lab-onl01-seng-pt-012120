@@ -11,10 +11,8 @@ class Application
 
     if req.path.match(/items/)
       path_item = req.path.split("/items/").last
-      @@items.find {|item| item.name == path_item}
-      if @@items.include?(path_item)
-        resp.write "#{path_item.name} : $#{path_item.price}"
-        # resp.write "#{path_item}"
+      if @@items.find {|item| item.name == path_item}
+
       else
         resp.write "#{path_item} not found."
       end
