@@ -13,7 +13,7 @@ class Application
       item = req.path.split("/items/").last
       if @@items.include?(item)
         resp.write "#{item.name} : $#{item.price}"
-        resp.write "#{item}"
+        # resp.write "#{item}"
       else
         resp.write "#{item} not found."
       end
