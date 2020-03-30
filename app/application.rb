@@ -12,6 +12,8 @@ class Application
       if @@items.include?(item)
         resp.write "#{item[0]} : $#{item[1]}"
         resp.write "#{item}"
+      else
+        resp.write "#{item} not found."
       end
     else
       resp.write "Route not found"
