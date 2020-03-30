@@ -8,7 +8,7 @@ class Application
     if req.path.match(/items/)
       resp.write "Item page!"
     else
-      
+      resp.write "Route not found"
     end
     resp.finish
   end
