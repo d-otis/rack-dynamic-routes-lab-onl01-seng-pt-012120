@@ -9,6 +9,7 @@ class Application
       resp.write "Item page!"
     else
       resp.write "Route not found"
+      resp.status = 404
     end
     resp.finish
   end
