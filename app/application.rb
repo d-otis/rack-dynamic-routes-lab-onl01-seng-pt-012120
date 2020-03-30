@@ -5,4 +5,8 @@ class Application
     req = Rack::Request.new(env)
   end
 
+  if req.path.match(/items/)
+    resp.write "Item page!"
+  end
+
 end
