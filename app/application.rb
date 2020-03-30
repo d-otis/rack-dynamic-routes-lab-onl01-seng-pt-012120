@@ -1,7 +1,7 @@
 class Application
 
   @@items = [
-            Item.new('Figs', 2.50)
+            # Item.new('Figs', 2.50)
   ]
 
   def call(env)
