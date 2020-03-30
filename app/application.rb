@@ -10,6 +10,7 @@ class Application
     if req.path.match(/items/)
       resp.write "Item page!\n"
       resp.write @@items
+      item = req.path.split("/items")
     else
       resp.write "Route not found"
       resp.status = 404
